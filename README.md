@@ -1,119 +1,267 @@
-# Aikira Project 🚀
+# 🚀 Aikira Platform
 
-**[EN]** A scalable educational platform built with modern engineering practices, focusing on AI and international career development.  
-**[PT]** Uma plataforma educacional escalável construída com práticas modernas de engenharia, focada em IA e desenvolvimento de carreira internacional.  
-**[JA]** 次世代(じせだい)教育(きょういく)学習(がくしゅう)基盤(きばん)「Aikira」— AIと次世代(じせだい)技術(ぎじゅつ)を融合(ゆうごう)させた国際的(こくさいてき)教育(きょういく)プラットフォーム。
-
----
-
-## 🛠 Tech Stack
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-05998b?style=for-the-badge&logo=fastapi&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007acc?style=for-the-badge&logo=typescript&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776ab?style=for-the-badge&logo=python&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ed?style=for-the-badge&logo=docker&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Node](https://img.shields.io/badge/node-%3E%3D20-green.svg)
+![Next.js](https://img.shields.io/badge/frontend-nextjs-black.svg)
+![FastAPI](https://img.shields.io/badge/backend-fastapi-009688.svg)
+![PostgreSQL](https://img.shields.io/badge/database-postgresql-blue.svg)
+![Docker](https://img.shields.io/badge/infrastructure-docker-blue.svg)
+![AWS Ready](https://img.shields.io/badge/cloud-AWS-orange.svg)
+![Monorepo](https://img.shields.io/badge/architecture-monorepo-purple.svg)
 
 ---
 
-## 🏗 Architecture Overview
+# 🧠 Overview
+
+**Aikira Platform** is an engineering-focused personal operating system designed to transform long-term professional goals into a scalable productivity and progression platform.
+
+The project combines:
+
+* task orchestration
+* gamification systems
+* financial tracking
+* learning pipelines
+* cloud-native architecture
+* DevOps workflows
+* real-world engineering practices
+
+Its long-term vision is to evolve into an international AI-driven educational and productivity ecosystem.
+
+---
+
+# 🇯🇵 <ruby>長期的<rt>ちょうきてき</rt></ruby>な<ruby>構想<rt>こうそう</rt></ruby> | Vision
+
+<ruby>Aikira<rt>アイキラ</rt></ruby> は、<ruby>技術<rt>ぎじゅつ</rt></ruby>・<ruby>教育<rt>きょういく</rt></ruby>・AI・<ruby>国際的<rt>こくさいてき</rt></ruby>な<ruby>成長<rt>せいちょう</rt></ruby>を<ruby>統合<rt>とうごう</rt></ruby>するためのプラットフォームです。
+
+<ruby>毎日<rt>まいにち</rt></ruby>の<ruby>積<rt>つ</rt></ruby>み<ruby>重<rt>かさ</rt></ruby>ねを<ruby>通<rt>とお</rt></ruby>して、<ruby>実践的<rt>じっせんてき</rt></ruby>なソフトウェア<ruby>工学<rt>こうがく</rt></ruby>とクラウド<ruby>技術<rt>ぎじゅつ</rt></ruby>を<ruby>学習<rt>がくしゅう</rt></ruby>しています。
+
+このプロジェクトは、<ruby>継続的<rt>けいぞくてき</rt></ruby>な<ruby>改善<rt>かいぜん</rt></ruby>と<ruby>国際的<rt>こくさいてき</rt></ruby>なエンジニアリングキャリアを<ruby>目的<rt>もくてき</rt></ruby>として<ruby>公開<rt>こうかい</rt></ruby>されています。
+
+---
+
+# 🏗️ Architecture
+
+## High-Level System Design
+
 ```mermaid
 graph TD
-    A[Client - Next.js] -->|HTTPS/REST| B[FastAPI Backend]
-    B -->|Query| C[(PostgreSQL)]
-    B -->|OpenAI| D[AI Services]
-    subgraph "Monorepo (Turborepo)"
-    A
-    B
+
+    User((User))
+
+    User --> WEB[Next.js Frontend]
+    WEB --> API[FastAPI Backend]
+    API --> ENGINE[Gamification & Productivity Engine]
+    API --> DB[(PostgreSQL)]
+
+    subgraph Core Systems
+        ENGINE --> TASKS[Task Management]
+        ENGINE --> XP[XP & Progression]
+        ENGINE --> FINANCE[Financial Tracking]
+        ENGINE --> LEARNING[Learning Pipeline]
     end
 
-🎯 Strategic Goals
-Focus	Description
-AI & Tech	Modern SaaS platform for technical education.
-International	Positioning for Japan 🇯🇵 and USA 🇺🇸 markets.
-Scalability	Evolving from MVP to enterprise-grade infrastructure.
-🛠️ Tech Stack
+    subgraph Infrastructure
+        API --> DOCKER[Docker Containers]
+        API --> CI[GitHub Actions]
+        API --> CLOUD[AWS Ready Infrastructure]
+    end
+```
 
-    Frontend: Next.js + TypeScript
+---
 
-    Backend: FastAPI (Python)
+# ☁️ Infrastructure Strategy
 
-    Database: PostgreSQL (Neon/Supabase)
+The platform follows a scalable cloud-oriented architecture designed for gradual evolution.
 
-    Infra: Docker, GitHub Actions, Vercel/Railway
+## Initial Infrastructure
 
-📝 Roadmap (Tri-Lingual)
-EN: Execution Strategy
+* Vercel (Frontend)
+* Render/Railway (Backend)
+* PostgreSQL (Neon/Supabase)
+* GitHub Actions
+* Docker-based local development
 
-    Phase 1 (Current): MVP focus, public construction, technical authority.
+## Future Infrastructure
 
-    Phase 2 (Future): AWS migration, enterprise branding, and global scale.
+* AWS ECS / EC2
+* AWS RDS PostgreSQL
+* AWS S3
+* AWS CloudFront
+* AWS Route53
+* Terraform-ready infrastructure
+* Container orchestration
 
-PT: Estratégia de Execução
+---
 
-    Fase 1 (Atual): Foco no MVP, construção em público, autoridade técnica.
+# 🛠️ Tech Stack
 
-    Fase 2 (Futuro): Migração para AWS, branding corporativo e escala global.
+## Frontend
 
-JA: 実行戦略 (実行じっこう戦略せんりゃく)
+* Next.js
+* React
+* TypeScript
+* TailwindCSS
 
-    第1フェーズ: MVP構築こうちく、公開こうかい開発かいはつ、技術的ぎじゅつてき権威けんいの確立かくりつ。
+## Backend
 
-    第2フェーズ: AWSへの移行いこう、グローバルな事業じぎょう展開てんかい。
+* FastAPI
+* Python
+* REST API
 
-⚖️ Policy & Security
+## Database
 
-    License: MIT
+* PostgreSQL
 
-    Security: Sensitive data (.env, secrets) are never committed. Use .env.example as a template.
+## DevOps & Cloud
 
-    Visibility: Public repository for portfolio building and community growth.
+* Docker
+* GitHub Actions
+* AWS (future migration)
+* CI/CD Pipelines
 
-🚀 Vision
+## Engineering Practices
 
-Building an international technical asset that serves as a bridge for global engineering opportunities, focusing on sustainability, productivity, and modern architecture.
-🎯 Strategic Goals
-Focus	Description
-AI & Tech	Modern SaaS platform for technical education.
-International	Positioning for Japan 🇯🇵 and USA 🇺🇸 markets.
-Scalability	Evolving from MVP to enterprise-grade infrastructure.
-🛠️ Tech Stack
+* Monorepo architecture
+* Clean architecture principles
+* Modular services
+* Environment isolation
+* Scalable infrastructure patterns
 
-    Frontend: Next.js + TypeScript
+---
 
-    Backend: FastAPI (Python)
+# 📦 Monorepo Structure
 
-    Database: PostgreSQL (Neon/Supabase)
+```plaintext
+aikira/
+│
+├── apps/
+│   ├── web/
+│   └── api/
+│
+├── packages/
+│
+├── infra/
+│
+├── docs/
+│
+├── .github/
+│
+└── README.md
+```
 
-    Infra: Docker, GitHub Actions, Vercel/Railway
+---
 
-📝 Roadmap (Tri-Lingual)
-EN: Execution Strategy
+# ⚙️ Engineering Goals
 
-    Phase 1 (Current): MVP focus, public construction, technical authority.
+This repository is designed to demonstrate:
 
-    Phase 2 (Future): AWS migration, enterprise branding, and global scale.
+* scalable backend architecture
+* modern frontend engineering
+* cloud-native thinking
+* DevOps workflows
+* CI/CD automation
+* infrastructure evolution
+* production-oriented coding standards
+* long-term maintainability
 
-PT: Estratégia de Execução
+---
 
-    Fase 1 (Atual): Foco no MVP, construção em público, autoridade técnica.
+# 🚀 Roadmap
 
-    Fase 2 (Futuro): Migração para AWS, branding corporativo e escala global.
+## Phase 1 — Foundation
 
-JA: 実行戦略 (実行じっこう戦略せんりゃく)
+* [x] Monorepo setup
+* [x] Initial architecture design
+* [x] PostgreSQL integration
+* [x] Docker environment
+* [ ] Authentication system
+* [ ] Task management engine
+* [ ] XP progression system
+* [ ] Financial tracking module
 
-    第1フェーズ: MVP構築こうちく、公開こうかい開発かいはつ、技術的ぎじゅつてき権威けんいの確立かくりつ。
+## Phase 2 — Platform Evolution
 
-    第2フェーズ: AWSへの移行いこう、グローバルな事業じぎょう展開てんかい。
+* [ ] AI-assisted productivity systems
+* [ ] Analytics dashboard
+* [ ] Internationalization (i18n)
+* [ ] Advanced DevOps workflows
+* [ ] Cloud migration strategy
 
-⚖️ Policy & Security
+## Phase 3 — Cloud Infrastructure
 
-    License: MIT
+* [ ] AWS infrastructure
+* [ ] Terraform provisioning
+* [ ] Observability stack
+* [ ] Scalable deployment pipeline
+* [ ] Distributed services architecture
 
-    Security: Sensitive data (.env, secrets) are never committed. Use .env.example as a template.
+---
 
-    Visibility: Public repository for portfolio building and community growth.
+# 🧪 Local Development
 
-🚀 Vision
+```bash
+# Clone repository
+git clone https://github.com/profalexandretolentino/aikira.git
 
-Building an international technical asset that serves as a bridge for global engineering opportunities, focusing on sustainability, productivity, and modern architecture.
+# Configure environment
+cp .env.example .env
+
+# Start containers
+docker compose up -d
+
+# Install dependencies
+npm install
+
+# Run frontend
+cd apps/web
+npm run dev
+
+# Run backend
+cd apps/api
+uvicorn main:app --reload
+```
+
+---
+
+# 🔐 Environment Strategy
+
+Sensitive data is isolated using environment variables.
+
+Example:
+
+```env
+DATABASE_URL=
+OPENAI_API_KEY=
+JWT_SECRET=
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+```
+
+---
+
+# 🌍 Languages
+
+* English
+* Portuguese
+* Japanese (learning support)
+
+---
+
+# 👨‍💻 Engineering Philosophy
+
+The platform is built around:
+
+* continuous improvement
+* real-world implementation
+* public technical evolution
+* long-term engineering discipline
+
+The objective is not only product development, but also the creation of a scalable and internationally aligned engineering ecosystem.
+
+---
+
+# 📄 License
+
+Licensed under the MIT License.
+
+Developed by Alexandre Tolentino.
